@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Alice', serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('behzad-ghaffarian-41D3oPlRbHQ-unsplash.jpg') no-repeat center center/cover;
+    position: relative;
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .highlight {
+    color: #A64D79;
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(26, 26, 29, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-family: 'Quattrocento', serif;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    font-family: 'Quattrocento', serif;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #A64D79;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+  }
+  
+  .reservation-btn {
+    background-color: #1A1A1D;
+    color: #A64D79;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #A64D79;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .reservation-btn:hover {
+    background-color: #E0C8D3;
+    opacity: 80%;
+    color: #1A1A1D;
+    border-color: #1A1A1D;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #F5E9E2;
+    background-size: cover;
+  }
+  
+  .about-content {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 30px;
+  }
+  
+  .about-content h2 {
+    font-family: 'Quattrocento', serif;
+    color: #A64D79;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-family: 'Alice', serif;
+    color: #1A1A1D;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9) sepia(10%);
+    border: 2px solid #A64D79;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #F5E9E2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-family: 'Quattrocento', serif;
+    color: #A64D79;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-family: 'Alice', serif;
+    color: #1A1A1D;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+    color: #3B1C32;
+    font-size: 18px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .contact-form label {
+    font-family: 'Alice', serif;
+    font-size: 16px;
+    color: #1A1A1D;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-family: 'Alice', serif;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #A64D79;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #1A1A1D;
+    background-color: #fff;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #6A1E55;
+  }
+  
+  .submit-btn {
+    background-color: #A64D79;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #6A1E55;
+  }
+  
+  /* Menu Section */
+  .menu-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #F5E9E2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .menu-section h2 {
+    font-family: 'Quattrocento', serif;
+    color: #A64D79;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-category {
+    margin-top: 30px;
+  }
+  
+  .menu-category h3 {
+    font-family: 'Quattrocento', serif;
+    color: #3B1C32;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #E0C8D3;
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-item-name {
+    font-family: 'Alice', serif;
+    color: #1A1A1D;
+    font-size: 18px;
+  }
+  
+  .menu-item-price {
+    font-family: 'Alice', serif;
+    color: #A64D79;
+    font-size: 18px;
+  }
+  
+  /* Reservation Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+  }
+  
+  .modal:target {
+    display: block;
+  }
+  
+  .modal-content {
+    background-color: #F5E9E2;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .close-btn {
+    color: #A64D79;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .close-btn:hover {
+    color: #6A1E55;
+  }
+  
+  .modal-content h2 {
+    font-family: 'Quattrocento', serif;
+    color: #A64D79;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .reservation-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .reservation-form label {
+    font-family: 'Alice', serif;
+    color: #1A1A1D;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .reservation-form input {
+    font-family: 'Alice', serif;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #A64D79;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #1A1A1D;
+  }
+  
+  .reservation-form input:focus {
+    outline: none;
+    border-color: #6A1E55;
+  }
+  
+  .submit-btn {
+    background-color: #A64D79;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #6A1E55;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .reservation-btn {
+      font-size: 16px;
+    }
+  
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  
+    .contact-section {
+      padding: 20px;
+      margin: 30px 10px;
+    }
+  
+    .contact-section h2 {
+      font-size: 28px;
+    }
+  
+    .menu-section {
+      padding: 20px;
+      margin: 30px 10px;
+    }
+  
+    .menu-section h2 {
+      font-size: 28px;
+    }
+  
+    .menu-category h3 {
+      font-size: 24px;
+    }
+  
+    .menu-item-name, .menu-item-price {
+      font-size: 16px;
+    }
+  }
+  

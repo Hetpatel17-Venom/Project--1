@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bistro Verde Table Restaurant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Quattrocento:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Gallery - Bistro Verde Table Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,8 +21,58 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </header>
-<!-- In process -->
-    <h2 style="color: white; background-color: black;">Sorry but, this page is under production</h2>
+
+    <main class="gallery-section ">
+        <h2>Our Gallery</h2>
+
+        <!-- Carousel -->
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-images">
+                <img src="f1.jpg" alt="Beautiful Courtyard" class="carousel-image">
+                <img src="f2.jpg" alt="Dining Experience" class="carousel-image">
+                <img src="f5.jpg" alt="Dining Experience" class="carousel-image">
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Static Gallery -->
+        <div class="static-gallery">
+            <img src="f1.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f2.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f3.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f4.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f5.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f6.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f7.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f8.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f9.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f10.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f11.jpg" alt="Courtyard" class="gallery-image">
+            <img src="f12.jpg" alt="Courtyard" class="gallery-image">
+        </div>
+    </main>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            else if (index < 0) currentSlide = slides.length - 1;
+            else currentSlide = index;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlide ? 'block' : 'none';
+            });
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => showSlide(currentSlide));
+    </script>
 </body>
 
 </html>

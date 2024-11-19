@@ -27,14 +27,13 @@
         <a href="#reservationModal" class="reservation-btn">Make a Reservation</a>
     </div>
 
-    <!-- Reservation Form Modal -->
     <div id="reservationModal" class="modal">
         <div class="modal-content">
             <a href="#" class="close-btn">&times;</a>
             <h2>Reservation</h2>
             <p style="color: #000;">Please fill in the form below to reserve a table.</p>
 
-            <form class="reservation-form" action="#" method="post">
+            <form class="reservation-form" onsubmit="handleReservation(event)">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -48,12 +47,36 @@
                 <input type="time" id="time" name="time" required>
 
                 <label for="guests">Number of Guests</label>
-                <input type="number" id="guests" name="guests" min="1" max="20" required>
+                <input type="number" id="guests" name="guests" min="1" max="15" required>
 
                 <button type="submit" class="submit-btn">Reserve Now</button>
             </form>
         </div>
     </div>
+
+    <script>
+        function handleReservation(event) {
+            event.preventDefault();
+            const today = new Date();
+            const dateInput = document.getElementById('date').value;
+            const timeInput = document.getElementById('time').value;
+            const guestsInput = document.getElementById('guests').value;
+
+            const reservationDate = new Date(`${dateInput}T${timeInput}`);
+            if (reservationDate < today) {
+                alert("Cannot book for past date or time.");
+                return;
+            }
+
+            if (guestsInput > 15) {
+                alert("Number of guests cannot exceed 15.");
+                return;
+            }
+
+            alert("Your table has been reserved!");
+            event.target.reset();
+        }
+    </script>
 
 </body>
 

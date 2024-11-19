@@ -33,7 +33,7 @@
             <p><strong>Email:</strong> contact@bistroverdetable.com</p>
         </div>
 
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -46,6 +46,14 @@
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert("Thanks for contacting us! We'll contact you shortly.");
+            event.target.reset(); // Reset the form fields
+        }
+    </script>
 </body>
 
 </html>

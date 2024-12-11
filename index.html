@@ -61,7 +61,7 @@
             const dateInput = document.getElementById('date').value;
             const timeInput = document.getElementById('time').value;
             const guestsInput = document.getElementById('guests').value;
-
+// Not Book past dates, I add condition for that
             const reservationDate = new Date(`${dateInput}T${timeInput}`);
             if (reservationDate < today) {
                 alert("Cannot book for past date or time.");
